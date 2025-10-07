@@ -212,6 +212,30 @@
       <pose>0 0 0 0 -0 0</pose>
       <self_collide>false</self_collide>
     </model>
+    <model name='obstacle_block'>
+      <pose>20 0 15 0 0 0</pose> <!-- x=20m, y=0m, z=15m (half of height to sit on ground) -->
+      <static>true</static>
+      <link name='block_link'>
+        <collision name='block_collision'>
+          <geometry>
+            <box>
+              <size>5 5 30</size> <!-- width=5, depth=5, height=30 -->
+            </box>
+          </geometry>
+        </collision>
+        <visual name='block_visual'>
+          <geometry>
+            <box>
+              <size>5 5 30</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.6 0.6 0.6 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
     <light name="sunUTC" type="directional">
       <pose>0 0 500 0 -0 0</pose>
       <cast_shadows>true</cast_shadows>
