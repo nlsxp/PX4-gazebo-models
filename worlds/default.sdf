@@ -212,21 +212,141 @@
       <pose>0 0 0 0 -0 0</pose>
       <self_collide>false</self_collide>
     </model>
-    <model name='obstacle_block'>
-      <pose>20 0 15 0 0 0</pose> <!-- x=20m, y=0m, z=15m (half of height to sit on ground) -->
+    <model name='obstacle_wall'>
+      <pose>30 10 15 0 0 0</pose> <!-- x=20m, y=0m, z=15m (half of height to sit on ground) -->
       <static>true</static>
-      <link name='block_link'>
-        <collision name='block_collision'>
+      <link name='wall_link'>
+        <collision name='wall_collision'>
+          <geometry>
+            <box>
+              <size>5 50 30</size> <!-- width=5, depth=5, height=30 -->
+            </box>
+          </geometry>
+        </collision>
+        <visual name='wall_visual'>
+          <geometry>
+            <box>
+              <size>5 50 30</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.6 0.6 0.6 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name='obstacle_wall_top'>
+      <pose>12.5 35 15 0 0 0</pose> <!-- x=20m, y=0m, z=15m (half of height to sit on ground) -->
+      <static>true</static>
+      <link name='wall_top_link'>
+        <collision name='wall_top_collision'>
+          <geometry>
+            <box>
+              <size>40 5 30</size> <!-- width=5, depth=5, height=30 -->
+            </box>
+          </geometry>
+        </collision>
+        <visual name='wall_top_visual'>
+          <geometry>
+            <box>
+              <size>40 5 30</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.6 0.6 0.6 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name='obstacle_tree_1'>
+      <pose>60 3 15 0 0 0</pose> <!-- x=20m, y=0m, z=15m (half of height to sit on ground) -->
+      <static>true</static>
+      <link name='tree_1_link'>
+        <collision name='tree_1_collision'>
           <geometry>
             <box>
               <size>5 5 30</size> <!-- width=5, depth=5, height=30 -->
             </box>
           </geometry>
         </collision>
-        <visual name='block_visual'>
+        <visual name='tree_1_visual'>
           <geometry>
             <box>
               <size>5 5 30</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.6 0.6 0.6 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name='obstacle_tree_2'>
+      <pose>75 10 15 0 0 0</pose> <!-- x=20m, y=0m, z=15m (half of height to sit on ground) -->
+      <static>true</static>
+      <link name='tree_2_link'>
+        <collision name='tree_2_collision'>
+          <geometry>
+            <box>
+              <size>5 5 30</size> <!-- width=5, depth=5, height=30 -->
+            </box>
+          </geometry>
+        </collision>
+        <visual name='tree_2_visual'>
+          <geometry>
+            <box>
+              <size>5 5 30</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.6 0.6 0.6 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name='obstacle_tree_3'>
+      <pose>65 -10 15 0 0 0</pose> <!-- x=20m, y=0m, z=15m (half of height to sit on ground) -->
+      <static>true</static>
+      <link name='tree_3_link'>
+        <collision name='tree_3_collision'>
+          <geometry>
+            <box>
+              <size>5 5 30</size> <!-- width=5, depth=5, height=30 -->
+            </box>
+          </geometry>
+        </collision>
+        <visual name='tree_3_visual'>
+          <geometry>
+            <box>
+              <size>5 5 30</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.6 0.6 0.6 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name='obstacle_pole'>
+      <pose>-30 0 15 0 0 0</pose> <!-- x=20m, y=0m, z=15m (half of height to sit on ground) -->
+      <static>true</static>
+      <link name='tree_3_link'>
+        <collision name='tree_3_collision'>
+          <geometry>
+            <box>
+              <size>0.5 0.5 30</size> <!-- width=5, depth=5, height=30 -->
+            </box>
+          </geometry>
+        </collision>
+        <visual name='tree_3_visual'>
+          <geometry>
+            <box>
+              <size>0.5 0.5 30</size>
             </box>
           </geometry>
           <material>
