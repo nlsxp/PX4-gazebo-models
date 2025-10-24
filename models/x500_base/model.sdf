@@ -291,7 +291,7 @@
       </sensor>
     </link>
     <link name="lidar_link">
-      <pose>.05 0 .10 0 0 0</pose>
+      <pose>.10 0 .10 3.14159 0 0</pose>
       <visual name="lidar_visual">
         <pose>0 0 0 0 0 0</pose>
         <geometry>
