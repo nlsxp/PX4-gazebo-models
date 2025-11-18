@@ -213,7 +213,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='obstacle_wall'>
-      <pose>30 10 15 0 0 0</pose> <!-- x=20m, y=0m, z=15m (half of height to sit on ground) -->
+      <pose>20 10 15 0 0 0</pose> <!-- x=20m, y=0m, z=15m (half of height to sit on ground) -->
       <static>true</static>
       <link name='wall_link'>
         <collision name='wall_collision'>
